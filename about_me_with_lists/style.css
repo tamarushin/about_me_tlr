@@ -16,3 +16,14 @@ p {
 h2 {
   margin-bottom: 20px;
 }
+
+li.listItems {
+  font-size: 30px;
+  color: green;
+  font-style: helvetica;
+}
+
+li {
+  font-size: 20px;
+  color: #444;
+}

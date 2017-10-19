@@ -4,7 +4,8 @@ var paper = prompt('does tama have a degree?');
 // var paper = paper.toUpperCase();
 
 console.log('tamas degree', paper);
-if (paper === "yes")  {
+paper = paper.toLowerCase();
+if (paper === 'yes' || paper === 'y') {
   alert ('That\'s right!!');
 } else {
   alert ('your wrong, i do!');
@@ -15,7 +16,8 @@ var hobbies = prompt('does tama have hobbies?');
 
 console.log('TAMAS HOBBIES', hobbies);
 
-if (hobbies === "yes") {
+hobbies = hobbies.toLowerCase();
+if (hobbies === 'yes' || hobbies === 'y') {
   alert ('i do');
 } else {
   alert ('your wrong, i do!');
@@ -24,7 +26,7 @@ if (hobbies === "yes") {
 var animal = prompt('is tamas favorite animal a dog?');
 
 console.log('tamas animal', animal);
-if (animal === "yes")  {
+if (animal === 'yes') {
   alert ('grrrrrreat!');
 } else {
   alert ('your wrong, it is!');
@@ -33,25 +35,34 @@ if (animal === "yes")  {
 var kid = prompt('does tama have a son?');
 
 console.log('tamas son', kid);
-if (kid === "yes")  {
+if (kid === 'yes') {
   alert('nope, a daughter!');
 } else {
   alert('Right! I have a daughter!');
 }
-var number
+var num;
 var counter = 1;
+var maxGuess = 4;
 
-while (number !== 32) {
-  number = parseInt(prompt('What is Tamas favorite number?'));
+while (num !== 32) {
+  num = parseInt(prompt('What is Tamas favorite number?'));
+  console.log('tama fav number:', num);
 
-  if(number < 31){
+  if(num < 31){
     alert('sorry you guessed too low');
-  }else if (number>33){
+    counter++;
+  } else if (num === 32) {
+    alert('AWESOME! You picked ' + num);
+    break;
+    counter++;
+  } else if (num > 33){
     alert('sorry you guessed too high');
-  }else if (number === NaN || number === null) {
+    counter++;
+  }else if (isNaN(num) || num === null) {
     alert('please enter a number');
-    counter++
+    counter++;
+  } else if (counter >= maxGuess); {
+    break;
   }
 }
-alert('AWSOME! You picked ' + number)
 console.log('counter:', counter);
