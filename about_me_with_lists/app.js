@@ -4,7 +4,7 @@ var paper = prompt('does tama have a degree?');
 // var paper = paper.toUpperCase();
 
 console.log('tamas degree', paper);
-if (paper === "yes")  {
+if (paper === 'yes' || paper === 'y')  {
   alert ('That\'s right!!');
 } else {
   alert ('your wrong, i do!');
@@ -13,9 +13,9 @@ if (paper === "yes")  {
 var hobbies = prompt('does tama have hobbies?');
 // var hobbies = hobbies.toLowerCase();
 
-console.log('TAMAS HOBBIES', hobbies);
+console.log('tamas hobbies', hobbies);
 
-if (hobbies === "yes") {
+if (hobbies === "yes" ) {
   alert ('i do');
 } else {
   alert ('your wrong, i do!');
